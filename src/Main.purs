@@ -21,20 +21,20 @@ foreign import logAny :: forall eff  a. a -> Eff eff Unit
 foreign import openUrl :: forall eff  a. a -> Eff eff Unit
 
 urlMap = [
-  Tuple "flappy.gif" "https://github.com/kiranpuppala-juspay/flappy",
-  Tuple "piano.gif" "https://github.com/sainiaditi/onlinePiano-halogen" ,
-  Tuple "breakout.gif" "https://github.com/sriharshachilakapati/prestodom-breakout-demo" ,
-  Tuple "balloon_shooter.gif" "https://github.com/Georgepadannamackal/Baloon_Shooter"
+  Tuple "dist/flappy.gif" "https://github.com/kiranpuppala-juspay/flappy",
+  Tuple "dist/piano.gif" "https://github.com/sainiaditi/onlinePiano-halogen" ,
+  Tuple "dist/breakout.gif" "https://github.com/sriharshachilakapati/prestodom-breakout-demo" ,
+  Tuple "dist/balloon_shooter.gif" "https://github.com/Georgepadannamackal/Baloon_Shooter"
   ]
 
 row1 = [
   "dist/breakout.gif",
-  "flappy.gif",
-  "piano.gif"
+  "dist/flappy.gif",
+  "dist/piano.gif"
   ]
 
 row2 = [
-  "balloon_shooter.gif"
+  "dist/balloon_shooter.gif"
   ]
 
 previewBox _imageUrl = imageView [
