@@ -28,7 +28,7 @@ urlMap = [
   ]
 
 row1 = [
-  "breakout.gif",
+  "dist/breakout.gif",
   "flappy.gif",
   "piano.gif"
   ]
