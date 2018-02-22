@@ -22616,18 +22616,19 @@ var PrestoDOM_Properties = __webpack_require__(533);
 var PrestoDOM_Types = __webpack_require__(82);
 var PrestoDOM_Types_DomAttributes = __webpack_require__(155);
 var PrestoDOM_Util = __webpack_require__(534);
-var urlMap = [new Data_Tuple.Tuple("dist/flappy.gif", "https://github.com/kiranpuppala-juspay/flappy"), new Data_Tuple.Tuple("dist/piano.gif", "https://github.com/sainiaditi/onlinePiano-halogen"), new Data_Tuple.Tuple("dist/breakout.gif", "https://github.com/sriharshachilakapati/prestodom-breakout-demo"), new Data_Tuple.Tuple("dist/balloon_shooter.gif", "https://github.com/Georgepadannamackal/Baloon_Shooter"), new Data_Tuple.Tuple("dist/tic.gif", "https://github.com/babivinay/TicTacToe")];
-var row2 = ["dist/balloon_shooter.gif", "dist/tic.gif"];
+var urlMap = [new Data_Tuple.Tuple("dist/flappy.gif", "https://github.com/kiranpuppala-juspay/flappy"), new Data_Tuple.Tuple("dist/piano.gif", "https://github.com/sainiaditi/onlinePiano-halogen"), new Data_Tuple.Tuple("dist/breakout.gif", "https://github.com/sriharshachilakapati/prestodom-breakout-demo"), new Data_Tuple.Tuple("dist/balloon_shooter.gif", "https://github.com/Georgepadannamackal/Baloon_Shooter"), new Data_Tuple.Tuple("dist/tic.gif", "https://github.com/babivinay/TicTacToe"), new Data_Tuple.Tuple("dist/chopper.gif", "https://github.com/prasannals/Chopper/")];
+var row3 = [];
+var row2 = ["dist/balloon_shooter.gif", "dist/tic.gif", "dist/chopper.gif"];
 var row1 = ["dist/breakout.gif", "dist/flappy.gif", "dist/piano.gif"];
 var previewBox = function (_imageUrl) {
-    return PrestoDOM_Elements.imageView([PrestoDOM_Properties.height(new PrestoDOM_Types_DomAttributes.V(200)), PrestoDOM_Properties.width(new PrestoDOM_Types_DomAttributes.V(350)), PrestoDOM_Properties.margin("0,0,10,10"), PrestoDOM_Properties.background("blue"), PrestoDOM_Properties.imageUrl(_imageUrl), PrestoDOM_Properties.cornerRadius("10"), PrestoDOM_Properties.stroke("10,#9a9696"), PrestoDOM_Properties.name("previewClicked"), PrestoDOM_Events.onClick("do")]);
+    return PrestoDOM_Elements.imageView([PrestoDOM_Properties.height(new PrestoDOM_Types_DomAttributes.V(200)), PrestoDOM_Properties.width(new PrestoDOM_Types_DomAttributes.V(350)), PrestoDOM_Properties.margin("0,0,10,10"), PrestoDOM_Properties.background("blue"), PrestoDOM_Properties.imageUrl(_imageUrl), PrestoDOM_Properties.cornerRadius("10"), PrestoDOM_Properties.stroke("10,#c6dee8"), PrestoDOM_Properties.name("previewClicked"), PrestoDOM_Events.onClick("do")]);
 };
 var widget = function (state) {
-    return PrestoDOM_Elements.linearLayout([PrestoDOM_Properties.height(PrestoDOM_Types_DomAttributes.Match_Parent.value), PrestoDOM_Properties.width(PrestoDOM_Types_DomAttributes.Match_Parent.value), PrestoDOM_Properties.background("#b7b7b7"), PrestoDOM_Properties.gravity("center")])([PrestoDOM_Elements.linearLayout([PrestoDOM_Properties.width(new PrestoDOM_Types_DomAttributes.V(1080)), PrestoDOM_Properties.orientation("vertical"), PrestoDOM_Properties.height(new PrestoDOM_Types_DomAttributes.V(420))])([PrestoDOM_Elements.linearLayout([PrestoDOM_Properties.width(new PrestoDOM_Types_DomAttributes.V(1080)), PrestoDOM_Properties.height(new PrestoDOM_Types_DomAttributes.V(210))])(Data_Functor.map(Data_Functor.functorArray)(function (x) {
+    return PrestoDOM_Elements.linearLayout([PrestoDOM_Properties.height(PrestoDOM_Types_DomAttributes.Match_Parent.value), PrestoDOM_Properties.width(PrestoDOM_Types_DomAttributes.Match_Parent.value), PrestoDOM_Properties.background("#f1fbff"), PrestoDOM_Properties.gravity("center")])([PrestoDOM_Elements.scrollView([PrestoDOM_Properties.width(new PrestoDOM_Types_DomAttributes.V(1080)), PrestoDOM_Properties.height(new PrestoDOM_Types_DomAttributes.V(500))])([PrestoDOM_Elements.linearLayout([PrestoDOM_Properties.width(PrestoDOM_Types_DomAttributes.Match_Parent.value), PrestoDOM_Properties.height(new PrestoDOM_Types_DomAttributes.V(420)), PrestoDOM_Properties.orientation("vertical")])([PrestoDOM_Elements.linearLayout([PrestoDOM_Properties.width(new PrestoDOM_Types_DomAttributes.V(1080)), PrestoDOM_Properties.height(new PrestoDOM_Types_DomAttributes.V(210))])(Data_Functor.map(Data_Functor.functorArray)(function (x) {
         return previewBox(x);
     })(row1)), PrestoDOM_Elements.linearLayout([PrestoDOM_Properties.width(new PrestoDOM_Types_DomAttributes.V(1080)), PrestoDOM_Properties.height(new PrestoDOM_Types_DomAttributes.V(210))])(Data_Functor.map(Data_Functor.functorArray)(function (x) {
         return previewBox(x);
-    })(row2))])]);
+    })(row2))])])]);
 };
 var findUrl = function (key) {
     return Data_Array.filter(function (v) {
@@ -22648,7 +22649,7 @@ var $$eval = function (v) {
                     if (v1 instanceof Data_Maybe.Just) {
                         return $foreign.openUrl(v1.value0.value1);
                     };
-                    throw new Error("Failed pattern match at Main line 87, column 24 - line 87, column 80: " + [v1.constructor.name]);
+                    throw new Error("Failed pattern match at Main line 98, column 24 - line 98, column 80: " + [v1.constructor.name]);
                 }());
             })()();
             return PrestoDOM_Util.getState();
@@ -22670,6 +22671,7 @@ module.exports = {
     urlMap: urlMap,
     row1: row1,
     row2: row2,
+    row3: row3,
     previewBox: previewBox,
     widget: widget,
     main: main,

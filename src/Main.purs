@@ -1,6 +1,10 @@
 module Main where
 
+import Data.Array
 import Data.Maybe
+import Data.Maybe
+import Data.Tuple
+import Partial.Unsafe
 import Prelude
 import PrestoDOM.Core
 import PrestoDOM.Elements
@@ -12,10 +16,6 @@ import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Console (CONSOLE, log, logShow)
 import Control.Plus ((<|>))
 import PrestoDOM.Util as U
-import Data.Tuple
-import Data.Array
-import Partial.Unsafe
-import Data.Maybe
 
 foreign import logAny :: forall eff  a. a -> Eff eff Unit
 foreign import openUrl :: forall eff  a. a -> Eff eff Unit
@@ -25,7 +25,8 @@ urlMap = [
   Tuple "dist/piano.gif" "https://github.com/sainiaditi/onlinePiano-halogen" ,
   Tuple "dist/breakout.gif" "https://github.com/sriharshachilakapati/prestodom-breakout-demo" ,
   Tuple "dist/balloon_shooter.gif" "https://github.com/Georgepadannamackal/Baloon_Shooter",
-  Tuple "dist/tic.gif" "https://github.com/babivinay/TicTacToe"
+  Tuple "dist/tic.gif" "https://github.com/babivinay/TicTacToe",
+  Tuple "dist/chopper.gif" "https://github.com/prasannals/Chopper/"
   ]
 
 row1 = [
@@ -36,7 +37,11 @@ row1 = [
 
 row2 = [
   "dist/balloon_shooter.gif",
-  "dist/tic.gif"
+  "dist/tic.gif",
+  "dist/chopper.gif"
+  ]
+
+row3 = [
   ]
 
 previewBox _imageUrl = imageView [
@@ -46,7 +51,7 @@ previewBox _imageUrl = imageView [
   background "blue",
   imageUrl _imageUrl,
   cornerRadius "10",
-  stroke "10,#9a9696",
+  stroke "10,#c6dee8",
   name "previewClicked",
   onClick "do"
   ]
@@ -54,19 +59,25 @@ previewBox _imageUrl = imageView [
 widget state = linearLayout
               [ height Match_Parent
               , width Match_Parent
-              , background "#b7b7b7"
+              , background "#f1fbff"
               , gravity "center"
               ]
               [
-                linearLayout
+                scrollView
                 [
                   width (V 1080)
-                , orientation "vertical"
-                , height (V 420)
+                , height (V 500)
                 ]
-                [
-                   linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row1)
-                  ,linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row2)
+                  [
+                    linearLayout
+                    [width Match_Parent
+                    ,height (V 420)
+                    ,orientation "vertical"]
+                  [
+                    linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row1)
+                    ,linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row2)
+                    -- ,linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row3)
+                  ]
                 ]
               ]
 
