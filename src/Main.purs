@@ -26,11 +26,12 @@ urlMap = [
   Tuple "dist/breakout.gif" "https://github.com/sriharshachilakapati/prestodom-breakout-demo" ,
   Tuple "dist/balloon_shooter.gif" "https://github.com/Georgepadannamackal/Baloon_Shooter",
   Tuple "dist/tic.gif" "https://github.com/babivinay/TicTacToe",
-  Tuple "dist/chopper.gif" "https://github.com/prasannals/Chopper/"
+  Tuple "dist/chopper.gif" "https://github.com/prasannals/Chopper/",
+  Tuple "dist/whack_a_mole.gif" "https://github.com/amankasliwal/whack-a-mole"
   ]
 
 row1 = [
-  "dist/breakout.gif",
+  "dist/whack_a_mole.gif",
   "dist/flappy.gif",
   "dist/piano.gif"
   ]
@@ -42,6 +43,7 @@ row2 = [
   ]
 
 row3 = [
+  "dist/breakout.gif"
   ]
 
 previewBox _imageUrl = imageView [
@@ -71,12 +73,12 @@ widget state = linearLayout
                   [
                     linearLayout
                     [width Match_Parent
-                    ,height (V 420)
+                    ,height (V 630)
                     ,orientation "vertical"]
                   [
                     linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row1)
                     ,linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row2)
-                    -- ,linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row3)
+                    ,linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row3)
                   ]
                 ]
               ]
