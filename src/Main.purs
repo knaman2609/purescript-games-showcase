@@ -48,7 +48,7 @@ previewBox _imageUrl = imageView [
   height (V 200),
   width  (V 350),
   margin "0,0,10,10",
-  background "blue",
+  background "#c6dee8",
   imageUrl _imageUrl,
   cornerRadius "10",
   stroke "10,#c6dee8",
