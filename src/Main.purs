@@ -24,7 +24,8 @@ urlMap = [
   Tuple "dist/flappy.gif" "https://github.com/kiranpuppala-juspay/flappy",
   Tuple "dist/piano.gif" "https://github.com/sainiaditi/onlinePiano-halogen" ,
   Tuple "dist/breakout.gif" "https://github.com/sriharshachilakapati/prestodom-breakout-demo" ,
-  Tuple "dist/balloon_shooter.gif" "https://github.com/Georgepadannamackal/Baloon_Shooter"
+  Tuple "dist/balloon_shooter.gif" "https://github.com/Georgepadannamackal/Baloon_Shooter",
+  Tuple "dist/tic.gif" "https://github.com/babivinay/TicTacToe"
   ]
 
 row1 = [
@@ -34,7 +35,8 @@ row1 = [
   ]
 
 row2 = [
-  "dist/balloon_shooter.gif"
+  "dist/balloon_shooter.gif",
+  "dist/tic.gif"
   ]
 
 previewBox _imageUrl = imageView [
@@ -81,8 +83,6 @@ findUrl key =
 
 eval :: forall a b t e. Maybe (EventResp a b) -> Eff (console :: CONSOLE | e) (Rec t)
 eval (Just x) = unsafePartial $ do
-  let (ValueS _x) = x.value
-
   case x.props of
     Props props -> let (Just (Tuple key value)) = head $ findUrl props.imageUrl in
       openUrl value
