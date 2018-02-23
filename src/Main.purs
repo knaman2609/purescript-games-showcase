@@ -27,23 +27,25 @@ urlMap = [
   Tuple "dist/balloon_shooter.gif" "https://github.com/Georgepadannamackal/Baloon_Shooter",
   Tuple "dist/tic.gif" "https://github.com/babivinay/TicTacToe",
   Tuple "dist/chopper.gif" "https://github.com/prasannals/Chopper/",
-  Tuple "dist/whack_a_mole.gif" "https://github.com/amankasliwal/whack-a-mole"
+  Tuple "dist/whack_a_mole.gif" "https://github.com/amankasliwal/whack-a-mole",
+  Tuple "dist/box_chaser.gif" "https://github.com/AmitRohan/presto-mario"
   ]
 
 row1 = [
   "dist/whack_a_mole.gif",
-  "dist/flappy.gif",
-  "dist/piano.gif"
+  "dist/box_chaser.gif",
+  "dist/flappy.gif"
   ]
 
 row2 = [
-  "dist/balloon_shooter.gif",
+  "dist/piano.gif",
   "dist/tic.gif",
   "dist/chopper.gif"
   ]
 
 row3 = [
-  "dist/breakout.gif"
+  "dist/breakout.gif",
+  "dist/balloon_shooter.gif"
   ]
 
 previewBox _imageUrl = imageView [
