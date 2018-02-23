@@ -22619,7 +22619,7 @@ var PrestoDOM_Util = __webpack_require__(534);
 var urlMap = [new Data_Tuple.Tuple("dist/flappy.gif", "https://github.com/kiranpuppala-juspay/flappy"), new Data_Tuple.Tuple("dist/piano.gif", "https://github.com/sainiaditi/onlinePiano-halogen"), new Data_Tuple.Tuple("dist/breakout.gif", "https://github.com/sriharshachilakapati/prestodom-breakout-demo"), new Data_Tuple.Tuple("dist/balloon_shooter.gif", "https://github.com/Georgepadannamackal/Baloon_Shooter"), new Data_Tuple.Tuple("dist/tic.gif", "https://github.com/babivinay/TicTacToe"), new Data_Tuple.Tuple("dist/chopper.gif", "https://github.com/prasannals/Chopper/"), new Data_Tuple.Tuple("dist/whack_a_mole.gif", "https://github.com/amankasliwal/whack-a-mole"), new Data_Tuple.Tuple("dist/box_chaser.gif", "https://github.com/AmitRohan/presto-mario")];
 var row3 = ["dist/breakout.gif", "dist/balloon_shooter.gif"];
 var row2 = ["dist/piano.gif", "dist/tic.gif", "dist/chopper.gif"];
-var row1 = ["dist/whack_a_mole.gif", "dist/box_chaser.gif", "dist/flappy.gif"];
+var row1 = ["dist/box_chaser.gif", "dist/whack_a_mole.gif", "dist/flappy.gif"];
 var previewBox = function (_imageUrl) {
     return PrestoDOM_Elements.imageView([PrestoDOM_Properties.height(new PrestoDOM_Types_DomAttributes.V(200)), PrestoDOM_Properties.width(new PrestoDOM_Types_DomAttributes.V(350)), PrestoDOM_Properties.margin("0,0,10,10"), PrestoDOM_Properties.background("#c6dee8"), PrestoDOM_Properties.imageUrl(_imageUrl), PrestoDOM_Properties.cornerRadius("10"), PrestoDOM_Properties.stroke("10,#c6dee8"), PrestoDOM_Properties.name("previewClicked"), PrestoDOM_Events.onClick("do")]);
 };
