@@ -28,7 +28,10 @@ urlMap = [
   Tuple "dist/tic.gif" "https://github.com/babivinay/TicTacToe",
   Tuple "dist/chopper.gif" "https://github.com/prasannals/Chopper/",
   Tuple "dist/whack_a_mole.gif" "https://github.com/amankasliwal/whack-a-mole",
-  Tuple "dist/box_chaser.gif" "https://github.com/AmitRohan/presto-mario"
+  Tuple "dist/box_chaser.gif" "https://github.com/AmitRohan/presto-mario",
+  Tuple "dist/egg_catcher.gif" "https://github.com/Swathign/Egg-Catcher",
+  Tuple "dist/pattern_matcher.gif" "https://github.com/prasannals/SimonSays",
+  Tuple "dist/dino_run.gif" "https://github.com/divahar94/Dino-Run"
   ]
 
 row1 = [
@@ -45,7 +48,13 @@ row2 = [
 
 row3 = [
   "dist/breakout.gif",
-  "dist/balloon_shooter.gif"
+  "dist/balloon_shooter.gif",
+  "dist/dino_run.gif"
+  ]
+
+row4 = [
+  "dist/egg_catcher.gif",
+  "dist/pattern_matcher.gif"
   ]
 
 previewBox _imageUrl = imageView [
@@ -81,6 +90,7 @@ widget state = linearLayout
                     linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row1)
                     ,linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row2)
                     ,linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row3)
+                    ,linearLayout [width (V 1080), height (V 210)] (map (\x -> previewBox x) row4)
                   ]
                 ]
               ]

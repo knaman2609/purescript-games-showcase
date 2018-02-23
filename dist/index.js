@@ -22616,8 +22616,9 @@ var PrestoDOM_Properties = __webpack_require__(533);
 var PrestoDOM_Types = __webpack_require__(82);
 var PrestoDOM_Types_DomAttributes = __webpack_require__(155);
 var PrestoDOM_Util = __webpack_require__(534);
-var urlMap = [new Data_Tuple.Tuple("dist/flappy.gif", "https://github.com/kiranpuppala-juspay/flappy"), new Data_Tuple.Tuple("dist/piano.gif", "https://github.com/sainiaditi/onlinePiano-halogen"), new Data_Tuple.Tuple("dist/breakout.gif", "https://github.com/sriharshachilakapati/prestodom-breakout-demo"), new Data_Tuple.Tuple("dist/balloon_shooter.gif", "https://github.com/Georgepadannamackal/Baloon_Shooter"), new Data_Tuple.Tuple("dist/tic.gif", "https://github.com/babivinay/TicTacToe"), new Data_Tuple.Tuple("dist/chopper.gif", "https://github.com/prasannals/Chopper/"), new Data_Tuple.Tuple("dist/whack_a_mole.gif", "https://github.com/amankasliwal/whack-a-mole"), new Data_Tuple.Tuple("dist/box_chaser.gif", "https://github.com/AmitRohan/presto-mario")];
-var row3 = ["dist/breakout.gif", "dist/balloon_shooter.gif"];
+var urlMap = [new Data_Tuple.Tuple("dist/flappy.gif", "https://github.com/kiranpuppala-juspay/flappy"), new Data_Tuple.Tuple("dist/piano.gif", "https://github.com/sainiaditi/onlinePiano-halogen"), new Data_Tuple.Tuple("dist/breakout.gif", "https://github.com/sriharshachilakapati/prestodom-breakout-demo"), new Data_Tuple.Tuple("dist/balloon_shooter.gif", "https://github.com/Georgepadannamackal/Baloon_Shooter"), new Data_Tuple.Tuple("dist/tic.gif", "https://github.com/babivinay/TicTacToe"), new Data_Tuple.Tuple("dist/chopper.gif", "https://github.com/prasannals/Chopper/"), new Data_Tuple.Tuple("dist/whack_a_mole.gif", "https://github.com/amankasliwal/whack-a-mole"), new Data_Tuple.Tuple("dist/box_chaser.gif", "https://github.com/AmitRohan/presto-mario"), new Data_Tuple.Tuple("dist/egg_catcher.gif", "https://github.com/Swathign/Egg-Catcher"), new Data_Tuple.Tuple("dist/pattern_matcher.gif", "https://github.com/prasannals/SimonSays"), new Data_Tuple.Tuple("dist/dino_run.gif", "https://github.com/divahar94/Dino-Run")];
+var row4 = ["dist/egg_catcher.gif", "dist/pattern_matcher.gif"];
+var row3 = ["dist/breakout.gif", "dist/balloon_shooter.gif", "dist/dino_run.gif"];
 var row2 = ["dist/piano.gif", "dist/tic.gif", "dist/chopper.gif"];
 var row1 = ["dist/box_chaser.gif", "dist/whack_a_mole.gif", "dist/flappy.gif"];
 var previewBox = function (_imageUrl) {
@@ -22630,7 +22631,9 @@ var widget = function (state) {
         return previewBox(x);
     })(row2)), PrestoDOM_Elements.linearLayout([PrestoDOM_Properties.width(new PrestoDOM_Types_DomAttributes.V(1080)), PrestoDOM_Properties.height(new PrestoDOM_Types_DomAttributes.V(210))])(Data_Functor.map(Data_Functor.functorArray)(function (x) {
         return previewBox(x);
-    })(row3))])])]);
+    })(row3)), PrestoDOM_Elements.linearLayout([PrestoDOM_Properties.width(new PrestoDOM_Types_DomAttributes.V(1080)), PrestoDOM_Properties.height(new PrestoDOM_Types_DomAttributes.V(210))])(Data_Functor.map(Data_Functor.functorArray)(function (x) {
+        return previewBox(x);
+    })(row4))])])]);
 };
 var findUrl = function (key) {
     return Data_Array.filter(function (v) {
@@ -22651,7 +22654,7 @@ var $$eval = function (v) {
                     if (v1 instanceof Data_Maybe.Just) {
                         return $foreign.openUrl(v1.value0.value1);
                     };
-                    throw new Error("Failed pattern match at Main line 102, column 24 - line 102, column 80: " + [v1.constructor.name]);
+                    throw new Error("Failed pattern match at Main line 112, column 24 - line 112, column 80: " + [v1.constructor.name]);
                 }());
             })()();
             return PrestoDOM_Util.getState();
@@ -22674,6 +22677,7 @@ module.exports = {
     row1: row1,
     row2: row2,
     row3: row3,
+    row4: row4,
     previewBox: previewBox,
     widget: widget,
     main: main,
